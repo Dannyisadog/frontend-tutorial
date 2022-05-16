@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+a {
+  color: white;
+}
+
 #navbar {
   width: 100%;
   height: 60px;
@@ -53,4 +57,121 @@ body {
   font-size: 48px;
   font-weight: bold;
   color: black;
+}
+
+.project-wrapper, .about-wrapper, .contact-wrapper, .another-image-wrapper {
+  padding: 0 60px;
+  margin-top: 60px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 30px;
+}
+.project-image {
+  position: relative;
+}
+
+.project-image-title {
+  width: 150px;
+  height: 40px;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.row1, .row2 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description, .contact-content-block {
+  margin-top: 30px;
+}
+
+.authors-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.author-block {
+  width: 375px;
+}
+
+.author-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+.job-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.job-desc {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.author-name-block {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.big-name {
+  font-size: 36px;
+  font-weight: bold;
+}
+.little-name {
+  font-size: 24px;
+}
+
+.right-wrapper {
+  text-align: center;
+}
+
+.contact-input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.input-wrapper, .submit-button {
+  margin-top: 20px;
+}
+
+.submit-button {
+  background: black;
+  color: white;
+  border: 0;
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #b9b9b9;
+  color: black;
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  background: black;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.footer-link {
+  margin-left: 5px;
 }
