@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>RWD DEMO</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left-wrapper">
+        <div>Logo</div>
+      </div>
+      <div class="right-wrapper">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">About</div>
+        <div class="nav-item">Gallery</div>
+        <div class="nav-item">Product</div>
+        <div class="nav-item">Contact</div>
+
+        <div class="hamburger" onclick="menuToggle()" >
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="menu"></div>
+    </div>
+
+    <script>
+      let showMenu = false;
+      const menu = document.querySelector(".menu");
+
+      function menuToggle() {
+        if (showMenu == true) {
+          // 把選單關起來
+          menu.classList.remove("open");
+          showMenu = false;
+        } else {
+          // 把選單打開
+          menu.classList.add("open");
+          showMenu = true;
+        }
+        console.log(showMenu);
+      }
+    </script>
+  </body>
+</html>
