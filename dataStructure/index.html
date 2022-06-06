@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <button onclick="appendProduct('剪刀')">新增</button>
+    <div class="cart">
+      
+    </div>
+    <script>
+      const products = ["剪刀", "筆", "杯子"];
+      // 拿到cart的元素
+      const cart = document.querySelector(".cart");
+      console.log(cart);
+      
+      function appendProduct(product_name) {
+        // 新增一個checkout的元素
+        const checkoutItem = document.createElement("div");
+        // 設定checkout的className
+        checkoutItem.className = "checkout-item";
+
+        // 新增checkout的文字內容
+        const checkoutItemText = document.createTextNode(product_name);
+
+        // 把文字丟進checkoutItem中
+        checkoutItem.appendChild(checkoutItemText);
+      
+        // 把checkoutItem丟進cart中
+        cart.appendChild(checkoutItem);
+      }
+    </script>
+  </body>
+</html>
