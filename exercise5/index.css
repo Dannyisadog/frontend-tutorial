@@ -1,0 +1,19 @@
+.cart {
+  width: 300px;
+  height: 100vh;
+  background: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-item {
+  height: 5vh;
+  width: 60px;
+  background: skyblue;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

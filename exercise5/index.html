@@ -3,15 +3,20 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <button onclick="appendProduct('剪刀')">新增</button>
+    <button onclick="append()">新增</button>
+    <button onclick="remove()">清空</button>
+    <div>這裡是購物車的內容</div>
     <div class="cart">
       
     </div>
     <script>
-      const products = ["剪刀", "筆", "杯子"];
+      const products = ["剪刀", "筆", "杯子", "書", "書架", "水壺", "冰箱", "餅乾"];
       // 拿到cart的元素
       const cart = document.querySelector(".cart");
-      console.log(cart);
+
+      function remove() {
+        cart.innerHTML = "";
+      }
       
       function appendProduct(product_name) {
         // 新增一個checkout的元素
@@ -27,6 +32,13 @@
       
         // 把checkoutItem丟進cart中
         cart.appendChild(checkoutItem);
+      }
+
+      function append() {
+        remove();
+        for (let i = 0; i < products.length; i++) {
+          appendProduct(products[i]);
+        }
       }
     </script>
   </body>
