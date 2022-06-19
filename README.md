@@ -1,5 +1,7 @@
 # front-end tutorial for beginners
 
+[main page](https://frontend-tutorial.vercel.app)
+
 - exercise 0 (simple html, css)
   [demo](https://frontend-tutorial.vercel.app/exercise0/index.html)
 
