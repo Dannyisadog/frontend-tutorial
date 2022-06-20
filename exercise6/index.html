@@ -7,70 +7,64 @@
     <div>商品區</div>
     <div class="products-area"></div>
     <div class="cart-title">購物車</div>
-    <button onclick="removeAll()">清空購物車</button>
+    <button onclick="">清空購物車</button>
     <div class="cart"></div>
 
+
     <script>
-      const product_area = document.querySelector(".products-area");
-      const cart = document.querySelector('.cart');
+    // 這邊是程式碼
 
-      const products = ["滷肉飯", "貢丸湯", "乾麵"];
-      
-      // 這個 function 負責把全部的商品都塞進商品區
-      function generateProducts() {
-        for(let i = 0; i < products.length; i++) {
-          const product_name = products[i];
-          const product_id = i;
-          generateProductItem(product_name, product_id);
-        }
+    // 商品
+    const products = ["滷肉飯", "貢丸湯", "乾麵"];
+  
+    // 商品區域
+    const productsArea = document.querySelector(".products-area");
+    const cart = document.querySelector(".cart");
+
+    function generateProducts() {
+      for (let i = 0; i < products.length; i++) {
+        const product_name = products[i];
+        generateProductItem(product_name);
       }
+    }
 
-      // 這個 function 負責產生單一個商品
-      function generateProductItem(product_name, product_id) {
-        const product_container = document.createElement('div');
-        product_container.classList.add('product-container');
+    function generateProductItem(product_name) {
+      const div = document.createElement("div");
 
-        const product_name_container = document.createElement('div');
-        const product_name_text = document.createTextNode(product_name);
+      div.classList.add("product-container");
+      const div_text = document.createTextNode(product_name);
 
-        product_name_container.appendChild(product_name_text);
+      const button = document.createElement("button");
 
-        const add_button = document.createElement('button');
-        add_button.addEventListener("click", function() {
-          addToCart(product_id);
-        });
-        add_button.classList.add('add-button');
-        const add_button_text = document.createTextNode('加入購物車');
+      button.addEventListener("click", function(){
+        addToCart(product_name);
+      });
 
-        add_button.appendChild(add_button_text);
+      button.classList.add("add-button");
 
-        product_container.appendChild(product_name_container);
-        product_container.appendChild(add_button);
+      const button_text = document.createTextNode("加入購物車");
 
-        product_area.appendChild(product_container);
-      }
+      button.appendChild(button_text);
 
-      function generateCartProductItem(product_id) {
-        const product_container = document.createElement('div');
-        product_container.classList.add('cart-item');
-        const product_name = products[product_id];
+      div.appendChild(div_text);
+      div.appendChild(button);
 
-        const product_name_text = document.createTextNode(product_name);
-        product_container.appendChild(product_name_text);
+      productsArea.appendChild(div);
+    }
 
-        return product_container
-      }
+    function addToCart(product_name) {
+      const cart_item = document.createElement("div");
 
-      function removeAll() {
-        cart.innerHTML = '';
-      }
+      cart_item.classList.add("cart-item");
 
-      function addToCart(product_id) {
-        const product_item = generateCartProductItem(product_id);
-        cart.appendChild(product_item);
-      }
+      const cart_item_text = document.createTextNode(product_name);
 
-      generateProducts();
+      cart_item.appendChild(cart_item_text);
+
+      cart.appendChild(cart_item);
+    }
+
+    generateProducts();
     </script>
   </body>
 </html>
