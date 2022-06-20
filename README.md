@@ -22,3 +22,7 @@
 - exercise 5 (simple data structure usage with array)
   [demo](https://frontend-tutorial.dannyisadog.com/exercise5/index.html),
   [ppt](https://docs.google.com/presentation/d/1XkiBveY9WesU0Z8zEx15T2xVlWiR0ocqHxYV3nxuHIk/edit?usp=sharing)
+
+- exercise 6 (simple shopping cart)
+  [demo](https://frontend-tutorial.dannyisadog.com/exercise6/index.html),
+  [ppt](https://docs.google.com/presentation/d/15n55YFC09tFSUUG1pvvLV3uPFpxjy7ew5pTwDDZBd9A/edit?usp=sharing)
