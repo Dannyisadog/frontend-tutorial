@@ -7,7 +7,7 @@
     <div>商品區</div>
     <div class="products-area"></div>
     <div class="cart-title">購物車</div>
-    <button onclick="">清空購物車</button>
+    <button onclick="removeAll()">清空購物車</button>
     <div class="cart"></div>
 
 
@@ -20,6 +20,10 @@
     // 商品區域
     const productsArea = document.querySelector(".products-area");
     const cart = document.querySelector(".cart");
+
+    function removeAll() {
+      cart.innerHTML = "";
+    }
 
     function generateProducts() {
       for (let i = 0; i < products.length; i++) {
