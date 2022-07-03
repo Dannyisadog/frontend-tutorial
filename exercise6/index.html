@@ -7,7 +7,7 @@
     <div>商品區</div>
     <div class="products-area"></div>
     <div class="cart-title">購物車</div>
-    <button onclick="">清空購物車</button>
+    <button onclick="removeAll()">清空購物車</button>
     <div class="cart"></div>
 
 
@@ -15,11 +15,15 @@
     // 這邊是程式碼
 
     // 商品
-    const products = ["滷肉飯", "貢丸湯", "乾麵"];
+    const products = ["滷肉飯", "貢丸湯", "乾麵", "米苔目"];
   
     // 商品區域
     const productsArea = document.querySelector(".products-area");
     const cart = document.querySelector(".cart");
+
+    function removeAll() {
+      cart.innerHTML = "";
+    }
 
     function generateProducts() {
       for (let i = 0; i < products.length; i++) {
@@ -59,7 +63,19 @@
 
       const cart_item_text = document.createTextNode(product_name);
 
+      const delete_button = document.createElement("button");
+
+      delete_button.addEventListener("mouseout", function(e) {
+          // e.target.parentElement.remove();
+          alert(123);
+      });
+
+      const delete_button_text = document.createTextNode("刪除");
+
+      delete_button.appendChild(delete_button_text);
+
       cart_item.appendChild(cart_item_text);
+      cart_item.appendChild(delete_button);
 
       cart.appendChild(cart_item);
     }
